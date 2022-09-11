@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./libs/bootstrap-version/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/custom.css">
+    <link rel="stylesheet" href="./style/custom-form.css">
+    <title>Componentes</title>
+</head>
+<body>
+    
+    <header>
+        <div class="col">
+            <ul class="nav justify-content-start">
+                <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./index.html#sobre">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="./index.html#produtos">Produtos</a></li>
+                <li class="nav-item"><a class="nav-link" href="./index.html#contato">Contato</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="ratio ratio-16x9">
+                        <img src="./imagens/bonecas.jpeg" class="d-block w-100 picture" alt="Amigurumis">
+                    </div>
+                    <div class="carousel-caption">
+                        <h5>Arte em Crochê</h5>
+                        <a class="btn btn-light stretched-link">Bora encomendar</a>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <div class="ratio ratio-16x9">
+                        
+                        <img src="./imagens/bailarina.jpeg" class="d-block w-100 picture" alt="Bailarina">
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <div class="ratio ratio-16x9">
+                        <img src="./imagens/anne-2.jpeg" class="d-block w-100 picture" alt="Anne">
+                    </div>
+                </div>
+                
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="bg-dark clearfix">
+            <a name="" id="" class="btn btn-link float-lg-start" href="#" role="button">Botão</a>
+            <a name="" id="" class="btn btn-dark float-end" href="#" role="button">Botão</a>
+        </div>
+    </div>
+    
+    <script src="./libs/bootstrap-version/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const carousel = new bootstrap.Carousel('#carouselExampleFade')
+    </script>
+</body>
+</html>

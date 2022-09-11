@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./bootstrap-version/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./libs/bootstrap-version/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style/custom.css">
     <title>Document</title>
 </head>
 <body>
-
+    
     <header>
         <div class="container">
             <div class="row">
                 <div class="col">
-
+                    
                     <h1>Logo</h1>
                     
                 </div>
@@ -29,21 +29,69 @@
             </div>
         </div>
     </header>
-
-    <section id="sobre">
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-sm-12">
-                <h1>Produtos em crochê</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi asperiores cum, suscipit magni beatae debitis temporibus est, earum eius pariatur tempore officia ab molestias quasi veniam illo nobis iusto nesciunt.</p>
-                <a href="#produtos" class="btn btn-lg btn-success">Botão</a>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="ratio ratio-16x9">
+                        <img src="./imagens/bonecas.jpeg" class="d-block w-100 picture" alt="Amigurumis">
+                    </div>
+                    <div class="carousel-caption">
+                        <h5>Arte em Crochê</h5>
+                        <a class="btn btn-light stretched-link">Bora encomendar</a>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <div class="ratio ratio-16x9">
+                        
+                        <img src="./imagens/bailarina.jpeg" class="d-block w-100 picture" alt="Bailarina">
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <div class="ratio ratio-16x9">
+                        <img src="./imagens/anne-2.jpeg" class="d-block w-100 picture" alt="Anne">
+                    </div>
+                </div>
+                
             </div>
-            <div class="col-md-4 col-sm-12">
-                <img src="./imagens/bolsa-salmon.jpeg" alt="Imagem Casaco Florido" class="img-fluid">
-
-            </div>
-         </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
+    <div class="container">
+        <div class="bg-dark clearfix">
+            <a name="" id="" class="btn btn-link float-lg-start" href="#" role="button">Botão</a>
+            <a name="" id="" class="btn btn-dark float-end" href="#" role="button">Botão</a>
+        </div>
+    </div>
+    
+    <script src="./libs/bootstrap-version/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const carousel = new bootstrap.Carousel('#carouselExampleFade')
+    </script>
+    
+    <section id="sobre">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-12">
+                    <h1>Produtos em crochê</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi asperiores cum, suscipit magni beatae debitis temporibus est, earum eius pariatur tempore officia ab molestias quasi veniam illo nobis iusto nesciunt.</p>
+                    <a href="#produtos" class="btn btn-lg btn-success">Botão</a>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <img src="./imagens/bolsa-salmon.jpeg" alt="Imagem Casaco Florido" class="img-fluid">
+                    
+                </div>
+            </div>
+        </div>
     </section>
     <section id="produtos">
         <div class="container">
@@ -51,9 +99,9 @@
                 <div class="col">
                     <h2>Produtos</h2>
                     <div class="card">
-                      
-
-
+                        
+                        
+                        
                         <img src="./imagens/bolsa-pr.jpeg" alt="Bolsa Preta" class="img-fluid">
                         <div class="card-body">
                             <h5 class="card-title"></h5>
@@ -96,70 +144,115 @@
                 <div class="col-md-6 col-sm-12">
                     <h2>Contato</h2>
                     <p>Ficou interessado? Preencha os campos do formulário abaixo para
-                    receber uma cotação.</p>
+                        receber uma cotação.</p>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12">
+                        <form class="form">
+                            <div class="input-group">
+                                <input class="form-control" type="text" name="nome" placeholder="Digite seu nome" required>
+                            </div>
+                            <div class="input-group">
+                                <input class="form-control" type="text" name="email" placeholder="Digite seu e-mail" required>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="endereco" class="col-form-label-sm">Endereço Completo</label>
+                                    <input type="text" id="endereco" class="form-control" placeholder="Endereço Completo" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="bairro" class="col-form-label-sm">Bairro</label>
+                                    <input type="text" id="bairro" class="form-control" placeholder="Bairro" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="complemento" class="col-form-label-sm">Complemento</label>
+                                    <input type="text" id="complemento" class="form-control" placeholder="Complemento" required>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                
+                                <div class="col">
+                                    <label for="cidade" class="col-form-label-sm">Cidade</label>
+                                    <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Cidade" required>
+                                </div>
+                                <div class="col">
+                                    <label for="estado" class="col-form-label-sm" required>Estado</label>
+                                    <select name="estado" id="estado" class="form-control">
+                                        <option value="">Selecione um estado</option>
+                                        <option value="sp">SP</option>
+                                        <option value="al">AL</option>
+                                        <option value="mg">MG</option>
+                                        <option value="go">GO</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="cep" class="col-form-label-sm">CEP</label>
+                                    <input type="text" name="cep" id="cep" class="form-control" placeholder="CEP" required>
+                                </div>
+                                
+                            </div>
+                            <button type="submit" class="btn btn-lg btn-success">Realizar Cadastro</button>
+                        </form>
+                       
+                            <form class="form">
+                                <div class="input-group">
+                                    <textarea placeholder="Digite suas preferências" pclass="form-control" name="" rows="5" cols="100"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-lg btn-success">Solicitar Cotação</button>
+                            </form> 
+                        
+                    </div>
                 </div>
-               
-                <div class="col-md-6 col-sm-12">
-                    <form class="form">
-                        <div class="input-group">
-                            <input class="form-control" type="text" name="nome" placeholder="Digite seu nome">
-                        </div>
-                        <div class="input-group">
-                            <input class="form-control" type="text" name="email" placeholder="Digite seu e-mail">
-                        </div>
-
-                        <div class="input-group">
-                            <textarea placeholder="Digite suas preferências" pclass="form-control" name="" rows="5" cols="100"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-lg btn-success">Solicitar Cotação</button>
-                    </form>
+            </div>
+        </section>
+        
+        <div class="modal fade" id="modal-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        
+                        <h5 class="modal-title">Produto 1</h5>
+                        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        
+                    </div>
+                    <div class="modal-body">
+                        <h6>Confira o tamanho e os preços</h6>
+                        <table class="table table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Tamanho</th>
+                                    <th>Valor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>P</td>
+                                    <td>R$ 100,00</td>
+                                </tr>
+                                <tr>
+                                    <td>M</td>
+                                    <td>R$ 200,00</td>
+                                </tr>
+                                <tr>
+                                    <td>G</td>
+                                    <td>R$ 300,00</td>
+                                </tr>
+                            </tbody>
+                            
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <div class="modal fade" id="modal-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    
-                    <h5 class="modal-title">Produto 1</h5>
-                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-                </div>
-                <div class="modal-body">
-                    <h6>Confira o tamanho e os preços</h6>
-                    <table class="table table-hover table-striped">
-                        <thead>
-                            <tr>
-                                <th>Tamanho</th>
-                                <th>Valor</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>P</td>
-                            <td>R$ 100,00</td>
-                        </tr>
-                        <tr>
-                            <td>M</td>
-                            <td>R$ 200,00</td>
-                        </tr>
-                        <tr>
-                            <td>G</td>
-                            <td>R$ 300,00</td>
-                        </tr>
-                        </tbody>
-                    
-                    </table>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="./bootstrap-version/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+        <script src="./libs/bootstrap-version/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
